@@ -1,0 +1,11 @@
+To build:
+
+1. download sbt following instructions at http://code.google.com/p/simple-build-tool/wiki/Setup
+
+2. sbt update
+
+3. sbt test
+
+The tests are the interesting thing here.  And I've probably committed with quite a few ignored, take a look
+and enable the interesting ones.
+

@@ -23,7 +23,7 @@ class ParallelisationTest extends FunSuite with Assertions with ShouldMatchers w
     }
   }
 
-  ignore("simple waitForDone with jetty http client") {
+  test("simple waitForDone with jetty http client") {
     val client = new HttpClient
     client.setConnectorType(HttpClient.CONNECTOR_SELECT_CHANNEL)
     client.start
