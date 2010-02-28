@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Managed Test Libs">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/lib_managed/scala_2.8.0.Beta1/test" />
+      <root url="file://$PROJECT_DIR$/lib_managed/scala_2.8.0.Beta1/compile" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/lib_managed/scala_2.8.0.Beta1/test" />
+      <root url="file://$PROJECT_DIR$/lib_managed/scala_2.8.0.Beta1/compile" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/lib_managed/scala_2.8.0.Beta1/compile" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/lib_managed/scala_2.8.0.Beta1/test" recursive="false" />
+  </library>
+</component>
