@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/future-http.iml" filepath="$PROJECT_DIR$/future-http.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project/project.iml" filepath="$PROJECT_DIR$/project/project.iml" />
     </modules>
   </component>
 </project>
