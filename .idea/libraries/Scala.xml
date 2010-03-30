@@ -7,6 +7,14 @@
     <SOURCES>
       <root url="file://$PROJECT_DIR$/../../Download/scala-2.8.0.r20327-b20091231020112-sources/src/library" />
       <root url="jar://$PROJECT_DIR$/../../Download/scala-2.8.0.Beta1-prerelease/src/scala-library-src.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../Downloads/scala-2.8.0.Beta1-prerelease-sources/src/actors" />
+      <root url="file://$PROJECT_DIR$/../../Downloads/scala-2.8.0.Beta1-prerelease-sources/src/jline/src/test/java" />
+      <root url="file://$PROJECT_DIR$/../../Downloads/scala-2.8.0.Beta1-prerelease-sources/src/jline/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../Downloads/scala-2.8.0.Beta1-prerelease-sources/src/library" />
+      <root url="file://$PROJECT_DIR$/../../Downloads/scala-2.8.0.Beta1-prerelease-sources/src/forkjoin" />
+      <root url="file://$PROJECT_DIR$/../../Downloads/scala-2.8.0.Beta1-prerelease-sources/src/msil" />
+      <root url="file://$PROJECT_DIR$/../../Downloads/scala-2.8.0.Beta1-prerelease-sources/src/fjbg" />
+      <root url="file://$PROJECT_DIR$/../../Downloads/scala-2.8.0.Beta1-prerelease-sources/src/partest" />
     </SOURCES>
     <jarDirectory url="file://$PROJECT_DIR$/project/boot/scala-2.8.0.Beta1/lib" recursive="false" />
   </library>
