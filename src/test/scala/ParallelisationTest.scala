@@ -86,7 +86,7 @@ class ParallelisationTest extends FunSuite with Assertions with ShouldMatchers w
 
   case class EXIT()
 
-  test("http request with callback") {
+  ignore("http request with callback") {
 
     val client = new HttpClient
     client.setConnectorType(HttpClient.CONNECTOR_SELECT_CHANNEL)
