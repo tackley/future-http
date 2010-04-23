@@ -3,6 +3,7 @@ import io.{Source}
 import java.lang.Throwable
 import org.eclipse.jetty.client.{ContentExchange, HttpExchange, HttpClient}
 import org.eclipse.jetty.io.Buffer
+import org.eclipse.jetty.util.thread.QueuedThreadPool
 import scala.actors.Futures._
 import scala.actors.Actor._
 import java.net.URL
@@ -29,12 +30,16 @@ class ParallelisationTest extends FunSuite with Assertions with ShouldMatchers w
     }
   }
 
-  ignore("simple waitForDone with jetty http client") {
+  test("simple waitForDone with jetty http client") {
     val client = new HttpClient
     client.setConnectorType(HttpClient.CONNECTOR_SELECT_CHANNEL)
+    client.setIdleTimeout(1000)
+    client.setTimeout(250)
+    client.setMaxConnectionsPerAddress(200)
+    client.setThreadPool(new QueuedThreadPool(250))
     client.start
 
-    val exchangeList = for (i <- 1 to 100) yield {
+    var exchangeList = for (i <- 1 to 100) yield {
       println("exchange " + i + " starting...")
 
       val exchange = new ContentExchange
@@ -48,11 +53,26 @@ class ParallelisationTest extends FunSuite with Assertions with ShouldMatchers w
 
     for (e: ContentExchange <- exchangeList) {
       e.waitForDone match {
-        case HttpExchange.STATUS_COMPLETED => println("back on the main thread: " + e.getResponseContent)
+        case HttpExchange.STATUS_COMPLETED =>
+          println("back on the main thread: " + e.getResponseContent)
+          e.cancel
+        case HttpExchange.STATUS_EXPIRED =>
+          println("Timeout! - hey i'm not interested with anything else")
         case other => println("unexpected status: " + other)
       }
     }
 
+    for (i <- 1 to 30) {
+      println(i)
+      Thread.sleep(1000)
+    }
+
+    exchangeList = null
+    
+    for (i <- 1 to 30) {
+      println(i)
+      Thread.sleep(1000)
+    }
   }
 
 

@@ -105,7 +105,7 @@ class BatchProcessor extends Actor {
 }
 
 class CoordinationTest extends FunSuite with Assertions with ShouldMatchers {
-  test("full index build spike") {
+  ignore("full index build spike") {
     val batchGenerator = new BatchGenerator().start
     val coordinator = new IndexBuildCoordinator(batchGenerator).start
 

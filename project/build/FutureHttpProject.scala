@@ -8,7 +8,7 @@ class FutureHttpProject(info: ProjectInfo) extends DefaultProject(info) {
   val scalaTest = "org.scalatest" % "scalatest" % "1.0.1-for-scala-2.8.0.Beta1-with-test-interfaces-0.3-SNAPSHOT" %
           "test" withSources()
 
-  val jettyServlet = "org.eclipse.jetty" % "jetty-servlet" % "7.0.1.v20091125" withSources()
-  val jettyClient = "org.eclipse.jetty" % "jetty-client" % "7.0.1.v20091125" withSources()
+  val jettyServlet = "org.eclipse.jetty" % "jetty-servlet" % "7.0.2.v20100331" withSources()
+  val jettyClient = "org.eclipse.jetty" % "jetty-client" % "7.0.2.v20100331" withSources()
 
 }
