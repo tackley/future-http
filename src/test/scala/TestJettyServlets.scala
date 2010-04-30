@@ -26,6 +26,7 @@ class SlowReponseServlet extends HttpServlet {
     Thread sleep 1000
     println("Servlet responding to " + counter)
 
+    resp.setHeader("Connection", "close")
     resp.getWriter.println("completed " + counter)
   }
 }
