@@ -1,6 +1,6 @@
 import sbt._
 
-class FutureHttpProject(info: ProjectInfo) extends DefaultProject(info) {
+class FutureHttpProject(info: ProjectInfo) extends DefaultProject(info) with IdeaProject {
 //  val scalaTest = "org.scalatest" % "scalatest" % "1.0" % "test" withSources()
 
   val scalaToolsSnapshots = "Scala-Tools Maven2 Snapshots Repository" at "http://scala-tools.org/repo-snapshots"
@@ -17,4 +17,7 @@ class FutureHttpProject(info: ProjectInfo) extends DefaultProject(info) {
   val jettyContinuation = "org.eclipse.jetty" % "jetty-continuation" % jettyVersion withSources()
 
   val apacheHttpClient = "commons-httpclient" % "commons-httpclient" % "3.1"
+
+
+  override def ivyUpdateLogging = UpdateLogging.Full
 }

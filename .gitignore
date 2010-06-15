@@ -4,4 +4,6 @@ src_managed/
 project/boot/
 out/
 *~
-.idea/workspace.xml
+*.iml
+*.ipr
+*.iws
