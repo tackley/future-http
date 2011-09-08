@@ -6,14 +6,14 @@ import org.scalatest.{Suite, BeforeAndAfterAll}
 trait TestJettyServlets extends BeforeAndAfterAll { this: Suite =>
   val server = new Server(8080)
 
-  override def beforeAll {
+  override def beforeAll() {
     val root = new ServletContextHandler(server, "/");
 
     root.addServlet(new ServletHolder(new SlowReponseServlet), "/slow");
     server.start()
   }
 
-  override def afterAll {
+  override def afterAll() {
     server.stop()
   }
 }
