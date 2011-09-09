@@ -8,7 +8,8 @@ libraryDependencies ++= {
    "org.eclipse.jetty" % "jetty-io" % jettyVersion,
    "org.eclipse.jetty" % "jetty-http" % jettyVersion,
    "org.eclipse.jetty" % "jetty-continuation" % jettyVersion,
-   "commons-httpclient" % "commons-httpclient" % "3.1"
+   "commons-httpclient" % "commons-httpclient" % "3.1",
+   "net.databinder" %% "dispatch-http" % "0.8.5"
   )
 }
 
